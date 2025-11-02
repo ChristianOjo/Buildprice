@@ -134,7 +134,7 @@ function calculateOptimizedQuote(items: any[], pricesByMaterial: any) {
     
     if (prices.length > 0) {
       // Find lowest price
-      const bestPrice = prices.reduce((min, p) => p.price < min.price ? p : min, prices[0])
+      const bestPrice = prices.reduce((min: any, p: any) => p.price < min.price ? p : min, prices[0])
       
       const subtotal = bestPrice.price * item.quantity
       total += subtotal
