@@ -68,10 +68,10 @@ function calculateSingleSupplierQuote(items: any[], pricesByMaterial: any) {
   // Find which supplier can provide the most items at reasonable prices
   const supplierScores: { [key: string]: { total: number; count: number; items: any[] } } = {}
 
-  items.forEach(item => {
+  items.forEach((item: any) => {
     const prices = pricesByMaterial[item.materialId] || []
     
-    prices.forEach(price => {
+    prices.forEach((price: any) => {
       const supplierId = price.suppliers.id
       if (!supplierScores[supplierId]) {
         supplierScores[supplierId] = { 
