@@ -176,7 +176,7 @@ function calculateLocalQuote(items: any[], pricesByMaterial: any) {
     const localPrices = prices.filter((p: any) => p.supplier_locations?.country === 'SZ')
     
     if (localPrices.length > 0) {
-      const bestLocalPrice = localPrices.reduce((min, p) => p.price < min.price ? p : min, localPrices[0])
+      const bestLocalPrice = localPrices.reduce((min: any, p: any) => p.price < min.price ? p : min, localPrices[0])
       
       const subtotal = bestLocalPrice.price * item.quantity
       total += subtotal

@@ -73,7 +73,7 @@ export default async function DashboardPage() {
 
         {/* Price Table */}
         <div className="mt-8">
-          <PriceTable prices={prices || []} />
+        <PriceTable prices={(prices || []) as any} />
         </div>
       </main>
     </div>
